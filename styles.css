@@ -1,2 +1,5 @@
 /* myCSS */
 
+.counter{
+	visibility: hidden;
+}
