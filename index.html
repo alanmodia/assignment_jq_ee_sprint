@@ -18,22 +18,23 @@
   	</header>
 
 	  <p>Use jQuery skills for form validation using event delegation and code organization best practices.</p>
+	  <h1>FORM</h1>
 
 		<form action="/">
 			<label for="first-name">First Name</label>
-			<input type="text" class="enter-first-name" name="first-name" placeholder="First name" required>
-			<span id="display-count-first-name" name="first-name-counter" class="counter">0</span><br><br>
+			<input type="text" id="first-name" class="enter-first-name" placeholder="First name" required autofocus>
+			<span id="count-first-name" class="counterColor counter">0</span><br><br>
 
-			<textarea name="about" class="text-area" placeholder="Tell us about yourself..." cols="60" rows="10"></textarea>
-			<span id="display-count-about" name="about-counter" class="counterColor counter">0</span><br><br>
+			<textarea id="about-yourself" name="about" class="text-area" placeholder="Tell us about yourself..." cols="60" rows="10" required></textarea>
+			<span id="count-about" class="counterColor counter">0</span><br><br>
 
 			<label for="password">Password</label>
-			<input type="password" class="enter-pw" name="password" placeholder="Password" required>
-			<span id="display-count-pw" name="pw-counter" class="counter">0</span><br><br>
+			<input type="password" id="password" class="enter-pw" placeholder="Password" required>
+			<span id="count-pw" class="counterColor counter">0</span><br><br>
 
 			<label for="password-confirm">Confirm Password</label>
-			<input type="password" class="confirm-pw" name="password-confirm" placeholder="Re-enter Password" required>
-			<span id="display-count-confirm-pw" name="pw-confirm-counter" class="counter">0</span><br><br>
+			<input type="password" id="password-confirm" class="confirm-pw" placeholder="Re-enter Password" required>
+			<span id="count-confirm-pw" class="counterColor counter">0</span><br><br>
 
 		</form>
 	</body>

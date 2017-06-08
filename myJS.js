@@ -1,82 +1,66 @@
 // $(document).ready(function() {
 
-//// addRemove class
-var addRemove = function(cha, $target) {
+$( 'form' ).on('keyup keydown', function( event ) {
+	var $obj = $(event.target);
+	var $display = $('#' + $obj.next().attr('id'));
+	var cha = $obj.val().length;
+	// to get the maxlength for this control from function maxLength	
+	// I only need this the first time a new field is triggered, as long as the user has not left this field
+	var $control = $('#' + $obj.attr('id'));
+	console.log($control); 
+	updateCountAndDisplay($obj, $display, cha);
+});
+
+//// updateCountAndDisplay class and update counter
+var updateCountAndDisplay = function($obj, $display, cha) {
 if (cha > 0 ) {
-	$target.removeClass( 'counter');
-	$target.text(cha);
-	// alert("addRemove is running");
+	// was 	$('#display-count-first-name').removeClass( 'counter');
+	$display.removeClass( 'counter' );
+	$display.text(cha);
 	} else {
-	$target.addClass( 'counter');
+	$display.addClass( 'counter' );
 	}
 };
 
-// NOTE: 
-// first-name will now run like confirm-pw, but only if I comment out confirm-pw. This is because each instance is setting the var $elem? So I made each var unique. They all run fine now. There were issues in the last commit, BTW, mostly mispelled nonmatching function names and a few typos.
-// A bigger deal is that copy paste cut no longer works using this approach. 
-// Also, I need delegate the event listener to the parent
+// check the maxLength for this control
+function maxLength($control){
 
-// ===== first-name =====
+	// console.log($control + ' before ');
+   var output = 
+   $control == '#first-name' ? 32
+   : 
+   $control == '#about-yourself' ? 140
+   : 
+   $control == '#password' ? 16
+   : 
+   $control == '#password-confirm' ? 16
+   :
+   0;
+   // console.log(output);
+   return output;
+};
 
-var $elemFn = $('input.enter-first-name');
-$elemFn.on('keyup keydown', function() {
-	updateCountFirstName($elemFn);
-});
+/////////////////////////  tests   //////////////////////////////
 
-function updateCountFirstName($elemFn) {
-var cha = $elemFn.val().length;
-var $target = $('#display-count-first-name');
-addRemove(cha, $target );
-}
+// TEST the maxLength for this control ONLOAD
+function checkMaxLength(checkControl){
 
-// before refactor
-// $('input.enter-first-name').keyup(updateCountFirstName);
-// $('input.enter-first-name').keydown(updateCountFirstName);
-// function updateCountFirstName() {
-// var cha = $(this).val().length;
-// if ( cha > 0 ) {
-// 	$('#display-count-first-name').removeClass( 'counter');
-// 	$('#display-count-first-name').text(cha);
-// 	} else {
-// 	$('#display-count-first-name').addClass( 'counter');
-// 	}
-// }
+	// console.log(checkControl + ' before ');
+   var output = 
+   checkControl == '#first-name' ? 32
+   : 
+   checkControl == '#about-yourself' ? 140
+   : 
+   checkControl == '#password' ? 16
+   : 
+   checkControl == '#password-confirm' ? 16
+   :
+   0;
+   // console.log(checkControl + ' after ');
+   // console.log(output);
+   return output;
+};
 
-// ===== enter-pw =====
-var $elemPw = $('input.enter-pw');
-$elemPw.on('keyup keydown', function() {
-	updateCountPw($elemPw);
-});
-
-function updateCountPw($elemPw) {
-var cha = $elemPw.val().length;
-var $target = $('#display-count-pw');
-addRemove(cha, $target );
-}
-
-// ===== confirm-pw =====
-var $elemCpw = $('input.confirm-pw');
-$elemCpw.on('keyup keydown', function() {
-	updateCountConfirmPw($elemCpw);
-});
-
-function updateCountConfirmPw($elemCpw) {
-var cha = $elemCpw.val().length;
-var $target = $('#display-count-confirm-pw');
-addRemove(cha, $target );
-}
-
-// ===== textarea =====
-var $elemTextArea = $('textarea');
-$elemTextArea.on('keyup, keydown', function() {
-	updateCountTextArea($elemTextArea);
-});
-
-function updateCountTextArea($elemTextArea) {
-	var cha = $elemTextArea.val().length;
-	var $target = $('#display-count-about');
-	addRemove(cha, $target );
-}
-
+// checkMaxLength('#about-yourself');
 
 // });
