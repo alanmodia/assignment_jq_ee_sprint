@@ -22,7 +22,8 @@
 
 		<form action="/">
 			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" class="enter-first-name" placeholder="First name" required autofocus>
+			<input type="text" id="first-name" class="enter-first-name" placeholder="First name" data-minCharacters='4' data-maxCharacters='12' required autofocus>
+
 			<span id="count-first-name" class="counterColor counter">0</span><br><br>
 
 			<textarea id="about-yourself" name="about" class="text-area" placeholder="Tell us about yourself..." cols="60" rows="10" required></textarea>

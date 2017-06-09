@@ -3,12 +3,40 @@
 $( 'form' ).on('keyup keydown', function( event ) {
 	var $obj = $(event.target);
 	var $display = $obj.next();
-	// console.log($display);
 	var characters = $obj.val().length;
-	// to get the maxlength for this control from function maxLength	
+
+	// var min = $(event.target).attr('data-min');
+	// var min = $(event.target).attr('data');
+	// var min = $(event.target).attr('min');
+	// const miny = document.querySelector('input.data-min');
+	// var min2 = document.querySelector.attr('input.data-min');
+	// var min2 = document.querySelector('input.placeholder');
+	// var min2 = document.querySelector(input.enter-first-name: DOMString)
+	// var miny = $(event.target).attr('data-min');
+	// var min = $obj.attr();
+	// var min = "monkey";
+
+	var min = $(event.target).attr('placeholder');
+	var min1 = $obj.attr('placeholder');
+	var min2 = $obj.attr('data-min');
+
+	// var min2 = document.querySelector('input.placeholder');
+
+	console.log($obj);
+	console.log(min);
+	console.log(min1);
+	console.log(min2);
+
+	// was using function maxlength to set maxLength
+	// commented it out
+	// 
 	// I only need this the first time a new field is triggered, as long as the user has not left this field
-	var min = $obj.data('min');
-	alert(min);
+
+
+
+	// console.log($display);
+	// console.log(min);
+	// console.log(characters + ' #ofCharacters');
 	updateCountAndDisplay($obj, $display, characters);
 });
 
