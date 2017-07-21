@@ -4,7 +4,7 @@
     <title>VCS Events and Effects</title>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="script.js" defer></script>
-    <script src="ddScript.js" defer></script>
+    <script src="ddScript.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="ddStyles.css">
  </head>
@@ -23,15 +23,14 @@
 	  <h1>DROPDOWN</h1>
 
   <!-- Drop Down -->
-
-<div class="drop-down-container">
-  <div class="selected-value">Placeholder</div>
-  <ul id="dd" class="dropdown">
-    <li><a href="#" class="dropdown">1</a></li>
-    <li><a href="#" class="dropdown">2</a></li>
-    <li><a href="#" class="dropdown">3</a></li>
+  <div>
+  <ul class="dropdown">
+    <li class="dropdown active"><a href="#" class="dropdown">.</a></li>
+    <li class="dropdown hidden"><a href="#" class="dropdown">Item 1</a></li>
+    <li class="dropdown hidden"><a href="#" class="dropdown">Item 2</a></li>
+    <li class="dropdown hidden"><a href="#" class="dropdown">Item 3</a></li>
   </ul>
-</div>
+  </div>
 
 </body>
 </html>

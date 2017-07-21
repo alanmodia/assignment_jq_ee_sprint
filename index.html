@@ -3,15 +3,15 @@
  <head>
     <title>VCS Events and Effects</title>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="myJS.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="myStyles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
  </head>
  <body>
 	  <h1>VCS 37 Events and Effects</h1>
   	<header class="header">
   	<h1 class="logo"><a href="#">Assignments</a></h1>
       <ul class="main-nav">
-      <li><a href="index.html">Form</a></li>
+      <li><a href="index.html"><strong>Form</strong></a></li>
       <li><a href="dropdown.html">Dropdown</a></li>
       <li><a href="phototagging.html">PhotoTagging</a></li>
       </ul>
@@ -20,22 +20,29 @@
 	  <p>Use jQuery skills for form validation using event delegation and code organization best practices.</p>
 	  <h1>FORM</h1>
 
-		<form action="/">
+		<form action="#">
 			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" class="enter-first-name" placeholder="First name" data-minCharacters='4' data-maxCharacters='12' required autofocus>
+			<input type="text" id="first-name" class="enter-first-name" placeholder="First Name" data-min='4' data-max='32' required autofocus>
+			<span id="count-first-name" class="counterColor counter">0</span>
+			<div id="alert-firstname-submit-fail" class="hideAlert fail">Your First Name must be a minimum of four characters and a maximum of 32 characters.</div>
 
-			<span id="count-first-name" class="counterColor counter">0</span><br><br>
-
-			<textarea id="about-yourself" name="about" class="text-area" placeholder="Tell us about yourself..." cols="60" rows="10" required></textarea>
-			<span id="count-about" class="counterColor counter">0</span><br><br>
+			<textarea id="about-yourself" class="text-area" placeholder="Tell us about yourself..." cols="60" rows="10" data-min='4' data-max='140' required></textarea>
+			<span id="count-about" class="counterColor counter">0</span>	    <div id="alert-textarea-submit-fail" class="hideAlert fail">"Tell us about yourself..." must be a minimum of four characters and a maximum of 140 characters.</div>
 
 			<label for="password">Password</label>
-			<input type="password" id="password" class="enter-pw" placeholder="Password" required>
-			<span id="count-pw" class="counterColor counter">0</span><br><br>
+			<input type="password" id="password" class="enter-pw" placeholder="Password" data-min='6' data-max='16' required>
+			<span id="count-pw" class="counterColor counter">0</span>
+			<div id="alert-password-submit-fail" class="hideAlert fail">Your Password must be a minimum of six characters and a maximum of 32 characters.</div>
 
 			<label for="password-confirm">Confirm Password</label>
-			<input type="password" id="password-confirm" class="confirm-pw" placeholder="Re-enter Password" required>
-			<span id="count-confirm-pw" class="counterColor counter">0</span><br><br>
+			<input type="password" id="password-confirm" class="confirm-pw" placeholder="Re-enter Password" data-min='6' data-max='16' required>
+			<span id="count-confirm-pw" class="counterColor counter">0</span>
+			<div id="alert-password-submit-fail" class="hideAlert fail">Your Password must be a minimum of six characters and a maximum of 16 characters.</div>
+			
+	    <div id="alert-password-typeAhead-fail" class="hideAlert fail">Passwords don't match!</div>
+	    <div id="alert-password-typeAhead-success" class="hideAlert success">Passwords match!</div>
+
+			<button>Submit</button>
 
 		</form>
 	</body>
