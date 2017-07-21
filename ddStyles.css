@@ -1,62 +1,49 @@
+
+/* 
+tried visibility:hidden;
+slide toggle uses display:none
+block
+inline
+inline-block
+none
+ */
+
+ div.drop-down-container{
+  width: 50%;
+ }
+
+ div.selected-value{
+  margin: 0;
+  padding: 0;
+  background-color: #CCC;
+}
+
+div.selected-value{
+  display: block;
+  padding: 0 20px;
+  color: #000;
+  font-size: 2em;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+#dd{
+  display: none; 
+}
+
 .dropdown {
   margin: 0;
   padding: 0;
   background-color: rgba(117, 204, 255, 1);
 }
 
-.dropdown:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.dropdown ul {
-  float: right;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-}
-
-/* class:element:element inside element*/
-.dropdown ul li {
-  margin: 0px;
-  display: inline-block;
-  float: left;
-  background-color: rgba(153, 204, 255, 1);
-}
-
 .dropdown a {
   display: block;
   padding: 0 20px;
   color: #FFF;
-  font-size: 20px;
+  font-size: 2em;
   line-height: 60px;
   text-decoration: none;
 }
 
 .dropdown a:hover { background-color: #000000; }
-
-/*.dropdown ul li ul li:hover { background: #000000; }
-
-/*
-.dropdown ul ul {
-  display: none;
-  position: absolute;
-  top: 60px;
-}
-
-.dropdown ul li:hover > ul { display: inherit; }
-
-.dropdown ul ul li {
-  width: 170px;
-  float: none;
-  display: list-item;
-  position: relative;
-}
-
-.dropdown ul ul ul li {
-  position: relative;
-  top: -60px;
-  left: 170px;
-}*/

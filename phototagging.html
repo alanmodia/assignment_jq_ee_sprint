@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <title>VCS Events and Effects</title>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="myJS.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="myStyles.css">
- </head>
+<head>
+   <title>VCS Events and Effects</title>
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="script.js" defer></script>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <link rel="stylesheet" type="text/css" href="phototagging.css">
+</head>
  <body>
 	  <h1>VCS 37 Events and Effects</h1>
   	<header class="header">
@@ -13,28 +14,15 @@
       <ul class="main-nav">
         <li><a href="index.html">Form</a></li>
         <li><a href="dropdown.html">Dropdown</a></li>
-        <li><a href="phototagging.html">PhotoTagging</a></li>
+        <li><a href="phototagging.html"><strong>PhotoTagging</strong></a></li>
       </ul>
   	</header>
 
-	  <p>Use jQuery skills to build a simple form-style dropdown menu without using &larr;select&rarr; tags.</p>
+	  <p>Use jQuery skills to build a "Photo tagging box" which allows you to select who is present in the photo from your list of friends.</p>
 
-		<form action="/">
-			<label for="first-name">First Name</label>
-			<input type="text" class="enter-first-name" name="first-name" placeholder="First name" required>
-			<span id="display-count-first-name" name="first-name-counter" class="counter">0</span><br><br>
+	  <div><img class="responsive" src='phil-coffman-161251.jpg'></div>
 
-			<textarea name="about" placeholder="Tell us about yourself..." cols="60" rows="10"></textarea>
-			<span id="display-count-about" name="about-counter" class="counter">0</span><br><br>
+	  <div class="photobox"></div>
 
-			<label for="password">Password</label>
-			<input type="password" class="enter-pw" name="password" placeholder="Password" required>
-			<span id="display-count-pw" name="pw-counter" class="counter">0</span><br><br>
-
-			<label for="password-confirm">Confirm Password</label>
-			<input type="password" class="confirm-pw" name="password-confirm" placeholder="Re-enter Password" required>
-			<span id="display-count-confirm-pw" name="pw-confirm-counter" class="counter">0</span><br><br>
-
-		</form>
 	</body>
 </html>
