@@ -8,7 +8,7 @@ $( 'form' ).on('keyup', function( event ) {
   var max = $obj.data('max');
 	
   // console.log(event.target);
-  console.log($obj);
+  // console.log($obj);
   // console.log(event.target.type);
   // console.log(event.target.id);
   // // console.log(event.target.class[0]);

@@ -1,6 +1,16 @@
 const photo = document.querySelector('.photo');
 const box = document.querySelector('.photobox');
 
+function show() {
+	box.style.display = 'inline-block';
+}
+photo.addEventListener('mouseenter', show);
+
+function hide() {
+	box.style.display = 'none';
+}
+photo.addEventListener('mouseleave', hide);
+
 function photoBox(e) {
 	let { pageX: x, pageY: y } = e;
 	x = x - 75;
@@ -9,15 +19,35 @@ function photoBox(e) {
 	// console.log(e);
 	// console.log(this);
 	// console.log(photobox);
+	// console.log(photo);
 	console.log(x, y);
 
 	box.style.top = `${y}px`;
 	box.style.left = `${x}px`;
 }
 
-photo.addEventListener('mousemove', photoBox);
+$(".photo").on("mousemove", photoBox);
+// photo.addEventListener('mousemove', photoBox);
 
+function photoClick(c) {
+	var newDiv = document.createElement('div');
+	newDiv.classList.add('photobox');
+	var newText = document.createTextNode("Blessed Acolytes");
+	newDiv.appendChild(newText);
 
+	var currentDiv = document.getElementById("acolyte");
+	document.body.insertBefore(newDiv, currentDiv);
+
+	// const { pageX: x, pageY: y } = c;
+	// x = x - 75;
+	// y = y - 75;
+
+	console.log(this);
+	console.log(c);
+	console.log(newDiv);
+
+}
+photo.addEventListener('click', photoClick);
 
 
 // $( '.photo' ).on( "mousemove", function( event ) {

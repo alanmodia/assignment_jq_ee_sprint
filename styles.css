@@ -33,9 +33,9 @@ button, input, select, textarea {
 	background: pink;
 }
 
-input .submitWarning {
+/*input .submitWarning {
 	highlight : rgba(255,0,0,.1);
-}
+}*/
 
 /* =====  Navigation  ===== */
 * {
@@ -45,7 +45,7 @@ input .submitWarning {
 body {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.6;
-	margin: 5;
+	margin: 5px;
 	min-height: 100vh;
 }
 
@@ -131,11 +131,11 @@ a {
 	.header {
 		flex-direction: column;
 		align-items: center;
-	.header {
+/*	.header {
 		width: 80%;
 		margin: 0 auto;
 		max-width: 1150px;
-		}
+		}*/
 	}
 }
 

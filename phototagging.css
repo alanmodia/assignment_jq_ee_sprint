@@ -16,12 +16,12 @@ none
 
 
 .photobox {
-	display: inline-block;
+	display: none;
 	position: fixed;
 	box-sizing: border-box;
 	border: 10px solid blue;
 	width: 150px;
 	height: 150px;
-	background-color: rgba(255, 255, 255, .5);
+/*	background-color: rgba(255, 255, 255, .5);*/
 	pointer-events: none;
 }
