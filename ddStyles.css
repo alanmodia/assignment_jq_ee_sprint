@@ -3,13 +3,15 @@
  }
 
  div.selected-value{
+  min-height: 200px;
   margin: 0;
-  padding: 0;
   background-color: #CCC;
 }
 
 div.selected-value{
   display: block;
+  height: 60px;
+  min-height: 60px;
   padding: 0 20px;
   color: #000;
   font-size: 2em;

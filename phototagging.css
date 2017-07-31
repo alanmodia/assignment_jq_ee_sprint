@@ -14,10 +14,9 @@ none
 	border: 0px solid #ddd;
 }
 
-
 /*.photobox {
 	display: none;
-	position: fixed;
+	position: fixed; // fixed position gave chrome fits, not Firefox
 	box-sizing: border-box;
 	border: 10px solid blue;
 	width: 150px;
@@ -25,7 +24,6 @@ none
 	background-color: rgba(255, 255, 255, .5);
 	pointer-events: none;
 }*/
-
 
 .photobox {
   display: none;
@@ -35,4 +33,16 @@ none
   width: 150px;
   height: 150px;
   pointer-events: none;
+}
+
+.personPicker {
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	width: 150px;
+	height: auto;
+	pointer-events: none;
+}
+
+
 }
