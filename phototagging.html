@@ -22,15 +22,20 @@
 
 	  <p>Use jQuery skills to build a "Photo tagging box" which allows you to select who is present in the photo from your list of friends.</p>
 
+<!-- set photo to responsive -->
 	  <div class="photo"><img class="responsive" src='phil-coffman-161251.jpg'></div>
 
-    <div id="photobox" class="photobox"></div>
-<!--     <br />
-    <br />
-    <br />
-    <br />
-    <div><img src="box.png"></div>
-    <div><img src="box.svg"></div> -->
+<!-- personPicker, the box that frames the person -->
+    <div id="personPickerID" class="personPicker"></div>
 
-	</body>
+<!-- personMenu, the menu used to identify the framed person -->
+    <div class="personMenu">
+      <div class="selected-value"></div>
+      <ul id="dd" class="dropdown">
+        <li><a href="#" class="dropdown">Sharon</a></li>
+        <li><a href="#" class="dropdown">Bruce</a></li>
+        <li><a href="#" class="dropdown">Ned</a></li>
+      </ul>
+    </div>
+ </body>
 </html>

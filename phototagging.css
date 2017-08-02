@@ -25,7 +25,7 @@ none
 	pointer-events: none;
 }*/
 
-.photobox {
+.personPicker {
   display: none;
   position: absolute;
   box-sizing: border-box;
@@ -35,14 +35,55 @@ none
   pointer-events: none;
 }
 
-.personPicker {
-	display: none;
-	position: absolute;
-	box-sizing: border-box;
-	width: 150px;
-	height: auto;
-	pointer-events: none;
+/*.visibleMenu {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+ }*/
+
+ .div.personMenu {
+   max-width: 150px;
+  }
+
+div.selected-value{
+  margin: 0;
+  max-width: 150px;
+  background-color: #CCC;
 }
 
-
+div.selected-value{
+  display: block;
+  min-height: 20px;
+  padding: 0 20px;
+  color: #000;
+  font-size: 1em;
+  line-height: 20px;
+  text-decoration: none;
 }
+ 
+#dd{
+/*  display: none; */
+	display: block;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 0;
+  max-width: 150px;
+  background-color: rgba(117, 204, 255, 1);
+}
+
+.dropdown a {
+  display: block;
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 1em;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.dropdown a:hover { background-color: #000000; }

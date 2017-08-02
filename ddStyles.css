@@ -1,8 +1,8 @@
- div.drop-down-container{
+div.drop-down-container{
   width: 50%;
  }
 
- div.selected-value{
+div.selected-value{
   min-height: 200px;
   margin: 0;
   background-color: #CCC;

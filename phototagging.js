@@ -1,39 +1,40 @@
 const photo = document.querySelector('.photo');
-const box = document.querySelector('.photobox');
+const picker = document.querySelector('.personPicker');
+const menu = document.querySelector('.personMenu');
 
 function show() {
-	box.style.display = 'inline-block';
+	picker.style.display = 'inline-block';
 }
 photo.addEventListener('mouseenter', show);
 
 function hide() {
-	box.style.display = 'none';
+	picker.style.display = 'none';
 }
 photo.addEventListener('mouseleave', hide);
 
-function photoBox(e) {
+function personPicker(e) {
 	let { pageX: x, pageY: y } = e;
 	x = x - 75;
 	y = y - 75;
 
 	// console.log(e);
 	// console.log(this);
-	// console.log(photobox);
+	// console.log(personPicker);
 	// console.log(photo);
 	// console.log(x, y);
 
-	box.style.top = `${y}px`;
-	box.style.left = `${x}px`;
+	picker.style.top = `${y}px`;
+	picker.style.left = `${x}px`;
 }
 
-// $(".photo").on("mousemove", photoBox);
-photo.addEventListener('mousemove', photoBox);
+// $(".photo").on("mousemove", personPicker);
+photo.addEventListener('mousemove', personPicker);
 
 function photoClick(c) {
   var newDiv = document.createElement('div');
-  newDiv.classList.add('photobox');
+  newDiv.classList.add('personPicker');
 
-  var currentDiv = document.getElementById("staticBox");
+  var currentDiv = document.getElementById("personPickerID");
   document.body.insertBefore(newDiv, currentDiv);
 
   let { pageX: x, pageY: y } = c;
@@ -43,12 +44,42 @@ function photoClick(c) {
   newDiv.style.left = `${ x }px`;
   newDiv.style.top = `${ y }px`;
   newDiv.style.display = 'block';
+
+  console.log("frame coords");
+  console.log(x, y);
+  // console.log(c);
+
+  personMenu(c);
 }
 photo.addEventListener('click', photoClick);
 
+function personMenu(c) {
+ console.log("set up the menu");
+ console.log("the new c  " + c);
+ console.log(c);
+ console.log(this);
+
+ var newDiv = document.createElement('div');
+ newDiv.classList.add('personMenu');
+
+ var currentDiv = document.getElementById("personPickerID");
+ document.body.insertBefore(newDiv, currentDiv);
+
+ let { pageX: x, pageY: y } = c;
+ x = x - 75;
+ y = y + 75;
+
+ newDiv.style.left = `${ x }px`;
+ newDiv.style.top = `${ y }px`;
+ newDiv.style.display = 'block';
+
+ console.log("menu coords");
+ console.log(x, y);
+
+}
 
 // $( '.photo' ).on( "mousemove", function( event ) {
-//   $( ".photobox" ).css({
+//   $( ".personPicker" ).css({
 //     "left" : event.pageX - 75 + "px",
 //     "top" : event.pageY - 75 + "px"
 //   });
