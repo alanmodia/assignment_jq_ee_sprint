@@ -3,7 +3,6 @@ div.drop-down-container{
  }
 
 div.selected-value{
-  min-height: 200px;
   margin: 0;
   background-color: #CCC;
 }

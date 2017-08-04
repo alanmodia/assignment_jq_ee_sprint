@@ -1,9 +1,11 @@
 const photo = document.querySelector('.photo');
 const mouseFrame = document.querySelector('.mouse-framer');
-const menu = document.querySelector('.menu');
+// const menu = document.querySelector('.menu');
 const sf = document.querySelector('.sticky-frame');
+// console.log(sf);
+// const deleteButton = document.querySelector('.delete-button');
+// console.log(deleteButton);
 let dataNum = sf.dataset.num;
-console.log(dataNum);
 
 function showFramer() {
 	mouseFrame.style.display = 'inline-block';
@@ -72,9 +74,7 @@ photo.addEventListener('mousemove', mouseFramer);
 
   function stickyFrame(c) {
 
-    $( "[data-num ='0']" ).clone(true, true).insertAfter( ".mouse-framer" );
-
-    const stickyFrame = document.querySelector('.sticky-frame');
+    $( "[data-num ='0']" ).clone().insertAfter( ".mouse-framer" );
 
     let { pageX: x, pageY: y } = c;
 
@@ -84,23 +84,21 @@ photo.addEventListener('mousemove', mouseFramer);
     dataNum = Number(dataNum);
     // isNaN(dataNum);
     dataNum = dataNum + 1;
-    stickyFrame.dataset.num = dataNum;
+    sf.dataset.num = dataNum;
 
-    stickyFrame.style.left = `${x}px`;
-    stickyFrame.style.top = `${y}px`;
+    sf.style.left = `${x}px`;
+    sf.style.top = `${y}px`;
 
-    hideFramer();
+    // hideFramer();
     console.log(dataNum);
-    personMenu(c);
+    // personMenu(c);
 }
 photo.addEventListener('click', stickyFrame);
 
 
-
 function personMenu(c) {
-
  // ===== toggle visibility and slide out dropdown items
- $('.dropdown-content').slideToggle( "slow", function() {
+ $('this.dropdown-content').slideToggle( "slow", function() {
  	});
 
  console.log("personMenu fired");
@@ -114,7 +112,7 @@ function checkGlobalNum() {
 }
 
 // ===== on anchor click change value of div  =====
-$( "a" ).click(function () {
+$( "a.dropdown" ).click(function () {
 	var value = $(this).text();
 	console.log(value);
 	$( 'div.selected-value' ).text(value);
@@ -122,10 +120,15 @@ $( "a" ).click(function () {
 	});
 });
 
-$( ".delete-button").click(function() {
-	console.log(this);
-	console.log("blah"); // left off here
-});
+// $( ".delete-button").click(function() {
+// 	console.log(this);
+// 	console.log("blah"); // left off here
+// });
+
+// function removeStickFrame() {
+// 	console.log("removeStickyFrame fired");
+// }
+// span.delete-button.addEventListener('click', removeStickyFrame);
 
 // $( '.photo' ).on( "mousemove", function( event ) {
 //   $( ".mouseFramer" ).css({

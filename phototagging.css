@@ -2,65 +2,68 @@
 	width: 100%;
 }
 
-/* 
-slide toggle uses display:none
-block
-inline
-inline-block
-none
- */
 .photo{
 	box-sizing: border-box;
 	border: 0px solid #ddd;
 }
 
-/*.photobox {
-	display: none;
-	position: fixed; // fixed position gave chrome fits, not Firefox
-	box-sizing: border-box;
-	border: 10px solid blue;
-	width: 150px;
-	height: 150px;
-	background-color: rgba(255, 255, 255, .5);
-	pointer-events: none;
-}*/
-
-.personPicker {
+.mouse-framer {
   display: none;
   position: absolute;
   box-sizing: border-box;
-  border: 10px solid blue;
-  width: 150px;
-  height: 150px;
+  border: 5px solid blue;
+  width: 120px;
+  height: 120px;
   pointer-events: none;
 }
 
-/*.visibleMenu {
-  display: none;
-  position: absolute;
-  box-sizing: border-box;
-  background-color: red;
-  width: 150px;
-  height: 150px;
-  pointer-events: none;
- }*/
+.sticky-frame {
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	border: 5px solid blue;
+	width: 120px;
+	height: 120px;
+	pointer-events: auto;
+}
 
- .div.personMenu {
-   max-width: 150px;
-  }
+.delete-button {
+	color: white;
+	font-weight: 600;
+	font-size: .7em;
+	text-align: center;
+}
+
+.delete-button {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: blue;
+	border-radius: 50%;
+	transform: translateY(-12px) translateX(105px);
+	pointer-events: auto;
+}
+
+ div.person-menu {
+ 	display: block;
+ 	position: absolute;
+  width: 120px;
+  transform: translateY(90px) translateX(-5px);
+}
 
 div.selected-value{
   margin: 0;
-  max-width: 150px;
-  background-color: #CCC;
+  width: 120px;
+  background-color: blue;
 }
 
 div.selected-value{
   display: block;
   min-height: 20px;
   padding: 0 20px;
-  color: #000;
-  font-size: 1em;
+  color: #FFF;
+  font-size: .7em;
   line-height: 20px;
   text-decoration: none;
 }
@@ -70,20 +73,26 @@ div.selected-value{
 	display: block;
 }
 
-.dropdown {
+.dropdown-content {
+	display: none;
+	position: relative;
   margin: 0;
   padding: 0;
-  max-width: 150px;
-  background-color: rgba(117, 204, 255, 1);
+  width: 120px;
+  background-color: rgba(117, 204, 255, .8);
+  z-index: 1;
 }
 
 .dropdown a {
   display: block;
-  padding: 0 20px;
-  color: #FFF;
-  font-size: 1em;
+  padding: 0 10px;
+  color: blue;
+  font-size: .7em;
   line-height: 20px;
   text-decoration: none;
 }
 
-.dropdown a:hover { background-color: #000000; }
+.dropdown a:hover {
+	color: white;
+	background-color: blue; 
+}

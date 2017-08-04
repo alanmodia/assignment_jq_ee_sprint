@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="utf-8"/>
-   <title>VCS Events and Effects</title>
-   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-   <script src="script.js" defer></script>
-   <script src="phototagging.js" defer></script>
-   <link rel="stylesheet" type="text/css" href="styles.css">
-   <link rel="stylesheet" type="text/css" href="phototagging.css">
+<head>
+ <meta charset="utf-8"/>
+ <title>VCS Events and Effects</title>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <script src="script.js" defer></script>
+ <script src="phototagging.js" defer></script>
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <link rel="stylesheet" type="text/css" href="phototagging.css">
 </head>
- <body>
-	  <h1>VCS 37 Events and Effects</h1>
-  	<header class="header">
-  	<h1 class="logo"><a href="#">Assignments</a></h1>
-      <ul class="main-nav">
-        <li><a href="index.html">Form</a></li>
-        <li><a href="dropdown.html">Dropdown</a></li>
-        <li><a href="phototagging.html"><strong>PhotoTagging</strong></a></li>
-      </ul>
-  	</header>
+<body>
+  <h1>VCS 37 Events and Effects</h1>
+	<header class="header">
+	<h1 class="logo"><a href="#">Assignments</a></h1>
+    <ul class="main-nav">
+      <li><a href="index.html">Form</a></li>
+      <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="phototagging.html"><strong>PhotoTagging</strong></a></li>
+    </ul>
+	</header>
 
-	  <p>Use jQuery skills to build a "Photo tagging box" which allows you to select who is present in the photo from your list of friends.</p>
+  <p>Use jQuery skills to build a "Photo tagging box" which allows you to select who is present in the photo from your list of friends.</p>
 
 <!-- set photo to responsive -->
-	  <div class="photo"><img class="responsive" src='phil-coffman-161251.jpg'></div>
+  <div class="photo"><img class="responsive" src='phil-coffman-161251.jpg'></div>
 
-<!-- personPicker, the box that frames the person -->
-    <div id="personPickerID" class="personPicker"></div>
+<!-- mouse-framer, the box that follows the mouse -->
+  <div class="mouse-framer"></div>
 
-<!-- personMenu, the menu used to identify the framed person -->
-    <div class="personMenu">
-      <div class="selected-value"></div>
-      <ul id="dd" class="dropdown">
-        <li><a href="#" class="dropdown">Sharon</a></li>
-        <li><a href="#" class="dropdown">Bruce</a></li>
-        <li><a href="#" class="dropdown">Ned</a></li>
-      </ul>
-    </div>
- </body>
+<!-- sticky-frame, the box stuck to a person -->
+<div class="sticky-frame" data-num='0'><span class="delete-button">X</span>
+  <div class="person-menu">
+    <div class="selected-value"></div>
+    <ul class="dropdown-content">
+      <li><a href="#" class="dropdown">Sharon</a></li>
+      <li><a href="#" class="dropdown">Bruce</a></li>
+      <li><a href="#" class="dropdown">Ned</a></li>
+    </ul>
+  </div>
+</div>
+</body>
 </html>
